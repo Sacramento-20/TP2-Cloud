@@ -4,9 +4,10 @@ from mlxtend.frequent_patterns import *
 import os
 import pickle
 
+# docker image build -t train_docker .
 
 # dir = "dataset/2023_spotify_ds1.csv"
-urldataset = os.environ.get('URL_DATASET')
+urldataset = os.environ.get('URL_DATASET', '/dataset/2023_spotify_ds1.csv')
 model_path = './model/'
 
 # Carregando dataset

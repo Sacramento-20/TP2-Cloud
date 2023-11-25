@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: TPCC-Deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: TPCC-Label 
+  template:
+    metadata:
+      labels:
+        app: TPCC-Label
+    spec:
+      containers:
+      - name: Flask 
+        image: flask_docker
+        ports:
+        - containerPort: 32194
+      - name: Train
+        image: train_docker
+

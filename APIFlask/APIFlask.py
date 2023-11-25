@@ -13,7 +13,7 @@ docker run -p 32194:32194 -d flask_docker
 """
 
 # version = "1.0"
-version  = os.environ.get('VERSION')
+version  = os.environ.get('VERSION', 1.0)
 model_path = "./model/rules.pkl"
 
 app = Flask(__name__)

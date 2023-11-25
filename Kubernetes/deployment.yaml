@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask 
-        image: sacramento-20/playlists-recommender-system
+        image: quay.io/sacramento-20/playlists-recommender-system
         imagePullPolicy: Always
         ports:
         - containerPort: 32194
@@ -23,7 +23,7 @@ spec:
           mountPath: /model/
       - name: train
         imagePullPolicy: Always
-        image: sacramento-20/playlists-model-recommender
+        image: quay.io/sacramento-20/playlists-model-recommender
         volumeMounts:
         - name: share-volume
           mountPath: /model/

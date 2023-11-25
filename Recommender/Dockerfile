@@ -1,5 +1,6 @@
-FROM python:3.13-rc-bookworm
+FROM python:3.11-bookworm
 COPY ./requirements.txt /
+# RUN apt update && apt install build-essential -y
 
 RUN pip install -r requirements.txt
 

@@ -3,10 +3,12 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import *
 import os
 import pickle
+import ssl
 
 # docker image build -t train_docker .
 
 # dir = "dataset/2023_spotify_ds1.csv"
+ssl._create_default_https_context = ssl._create_unverified_context
 urldataset = os.environ.get('URL_DATASET', 'https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv')
 model_path = './model/'
 

@@ -2,6 +2,7 @@ import os
 import json
 import time
 import pickle
+import pandas
 from flask import Flask, jsonify, request
 
 # flask --app recommend.py run --port 32194 

@@ -27,6 +27,9 @@ spec:
         volumeMounts:
         - name: share-volume
           mountPath: /model/
+        env:
+        - name: URL_DATASET
+          value: "https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv"
 
       volumes:
         - name: share-volume

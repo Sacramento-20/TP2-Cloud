@@ -19,8 +19,6 @@ model_path = "./model/rules.pkl"
 
 app = Flask(__name__)
 
-app.model = pickle.load(open(model_path, "rb"))
-app.last_modified = os.path.getmtime(model_path)
 
 import math
 
@@ -99,6 +97,10 @@ if __name__ == "__main__":
     while not os.path.exists(model_path):
         print("Waiting for pickle.")
         time.sleep(1)
+
+    app.model = pickle.load(open(model_path, "rb"))
+    app.last_modified = os.path.getmtime(model_path)
+
     port = int(os.environ.get('PORT', 32194))
     app.run(host='0.0.0.0', port=port)
 

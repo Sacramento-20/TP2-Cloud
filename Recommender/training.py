@@ -5,16 +5,17 @@ import os
 import pickle
 
 
-dir = "dataset/2023_spotify_ds1.csv"
+# dir = "dataset/2023_spotify_ds1.csv"
+urldataset = os.environ.get('URL_DATASET')
 model_path = './model/'
 
 # Carregando dataset
-def Load_Database(dir):
-  DF = pd.read_csv(dir)
+def Load_Database(urldataset):
+  DF = pd.read_csv(urldataset)
   return DF
 
-def Model_train(dir):
-    DF = Load_Database(dir)
+def Model_train(urldataset):
+    DF = Load_Database(urldataset)
     df_onehot = DF.groupby(['pid', 'track_name'])['track_name'].count().unstack().fillna(0)
     
     def encode_units(x):

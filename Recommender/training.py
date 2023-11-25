@@ -39,3 +39,6 @@ def Model_train(urldataset):
     # Gerando o conjunto de regras
     rules.to_pickle(f"{model_path}rules.pkl")
 
+Model_train(urldataset)
+while True:
+    time.sleep(10)

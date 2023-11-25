@@ -3,7 +3,7 @@ COPY ./requirements.txt /
 
 RUN pip install -r requirements.txt
 
-COPY recommend.py /
+COPY APIFlask.py /
 
 ENTRYPOINT [ "python" ]
-CMD [ "recommend.py" ]
+CMD [ "APIFlask.py" ]

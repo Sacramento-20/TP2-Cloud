@@ -10,6 +10,8 @@ import pickle
 urldataset = os.environ.get('URL_DATASET', '/dataset/2023_spotify_ds1.csv')
 model_path = './model/'
 
+print(urldataset)
+
 # Carregando dataset
 def Load_Database(urldataset):
   DF = pd.read_csv(urldataset)

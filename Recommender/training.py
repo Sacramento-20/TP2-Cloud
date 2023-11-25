@@ -7,7 +7,7 @@ import pickle
 # docker image build -t train_docker .
 
 # dir = "dataset/2023_spotify_ds1.csv"
-urldataset = os.environ.get('URL_DATASET', '/dataset/2023_spotify_ds1.csv')
+urldataset = os.environ.get('URL_DATASET', 'https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv')
 model_path = './model/'
 
 print(urldataset)

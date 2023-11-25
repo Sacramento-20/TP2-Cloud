@@ -5,7 +5,7 @@ import os
 import pickle
 
 
-dir = "datasets/train/2023_spotify_ds1.csv"
+dir = "datasets/2023_spotify_ds1.csv"
 model_path = ''
 
 # Carregando dataset

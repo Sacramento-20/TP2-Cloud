@@ -14,9 +14,8 @@ spec:
     spec:
       containers:
       - name: Flask 
-        image: flask_docker
+        image: quay.io/sacramento-20/playlists-recommender-system
         ports:
         - containerPort: 32194
       - name: Train
-        image: train_docker
-
+        image: quay.io/sacramento-20/playlists-model-recommender

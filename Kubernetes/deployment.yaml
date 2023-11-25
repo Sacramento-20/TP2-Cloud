@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: TPCC-Deploy
+  name: tpcc-deploy
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: TPCC-Label 
+      app: tpcc-label 
   template:
     metadata:
       labels:
-        app: TPCC-Label
+        app: tpcc-label
     spec:
       containers:
-      - name: Flask 
+      - name: flask 
         image: quay.io/sacramento-20/playlists-recommender-system
         ports:
         - containerPort: 32194
-      - name: Train
+      - name: train
         image: quay.io/sacramento-20/playlists-model-recommender

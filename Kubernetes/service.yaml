@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Service
 metadata:
-  name: TPCC-Service
+  name: tpcc-service
 spec:
   selector:
-    app: TPCC-Label 
+    app: train 
   ports:
     - protocol: TCP
       port: 32194 

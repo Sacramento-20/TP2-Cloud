@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import pickle
 from flask import Flask, jsonify, request
 
@@ -95,6 +96,9 @@ def index():
     #                'author': 'world'})
 
 if __name__ == "__main__":
+    while not os.path.exists(model_path):
+        print("Waiting for pickle.")
+        time.sleep(1)
     port = int(os.environ.get('PORT', 32194))
     app.run(host='0.0.0.0', port=port)
 

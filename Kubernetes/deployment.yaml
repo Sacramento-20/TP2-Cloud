@@ -14,8 +14,21 @@ spec:
     spec:
       containers:
       - name: flask 
-        image: quay.io/sacramento-20/playlists-recommender-system
+        image: sacramento-20/playlists-recommender-system
+        imagePullPolicy: Always
         ports:
         - containerPort: 32194
+        volumeMounts:
+        - name: share-volume
+          mountPath: /model/
       - name: train
-        image: quay.io/sacramento-20/playlists-model-recommender
+        imagePullPolicy: Always
+        image: sacramento-20/playlists-model-recommender
+        volumeMounts:
+        - name: share-volume
+          mountPath: /model/
+
+      volumes:
+        - name: share-volume
+          persistentVolumeClaim:
+            claimName: project2-pv-kaelaugusto

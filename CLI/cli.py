@@ -1,5 +1,10 @@
 import sys, os, json
 
+"""
+Example usage:
+python cli.py "song a, song b"
+"""
+
 site = "http://127.0.0.1:32194"
 
 def usage():

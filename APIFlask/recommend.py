@@ -5,6 +5,12 @@ from flask import Flask, jsonify, request
 
 # flask --app recommend.py run --port 32194 
 # wget --header='Content-Type: application/json' --post-data '{"songs": ["Yesterday", "Bohemian Rhapsody"]}' http://127.0.0.1:32194/api/recommend/ -q -O -
+"""
+To create a docker container out of this, do:
+pipreqs --savepath=requirements.in && pip-compile
+docker image build -t flask_docker .
+docker run -p 32194:32194 -d flask_docker
+"""
 
 app = Flask(__name__)
 

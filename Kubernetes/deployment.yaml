@@ -23,7 +23,7 @@ spec:
           mountPath: /model/
         env:
         - name: VERSION
-          value: "v0.1"
+          value: "v0.11"
       initContainers:
       - name: train
         restartPolicy: OnFailure

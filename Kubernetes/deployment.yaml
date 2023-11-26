@@ -21,6 +21,9 @@ spec:
         volumeMounts:
         - name: share-volume
           mountPath: /model/
+        env:
+        - name: VERSION
+          value: "v0.1"
       - name: train
         imagePullPolicy: Always
         image: quay.io/sacramento-20/playlists-model-recommender

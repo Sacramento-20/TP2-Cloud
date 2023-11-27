@@ -26,7 +26,6 @@ spec:
           value: "v0.11"
       initContainers:
       - name: train
-        restartPolicy: OnFailure
         imagePullPolicy: Always
         image: quay.io/sacramento-20/playlists-model-recommender
         volumeMounts:

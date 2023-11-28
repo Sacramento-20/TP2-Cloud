@@ -5,7 +5,7 @@ Example usage:
 python cli.py "song a, song b"
 """
 
-site = "http://127.0.0.1:32194"
+site = "http://10.108.215.15:32194"
 
 def usage():
     print("The correct usage of this app is python cli.py \"song a, song b, song c\"")

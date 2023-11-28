@@ -4,7 +4,7 @@ metadata:
   name: tpcc-service
 spec:
   selector:
-    app: flask 
+    app: tpcc-label 
   ports:
     - protocol: TCP
       port: 32194 

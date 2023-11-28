@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tpcc-deploy
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tpcc-label 
@@ -23,7 +23,7 @@ spec:
           mountPath: /model/
         env:
         - name: VERSION
-          value: "v0.13"
+          value: "v0.14"
       initContainers:
       - name: train
         imagePullPolicy: Always

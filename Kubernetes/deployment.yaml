@@ -23,7 +23,7 @@ spec:
           mountPath: /model/
         env:
         - name: VERSION
-          value: "v0.11"
+          value: "v0.12"
       initContainers:
       - name: train
         imagePullPolicy: Always
@@ -33,7 +33,7 @@ spec:
           mountPath: /model/
         env:
         - name: URL_DATASET
-          value: "https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv"
+          value: "https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds2.csv"
 
       volumes:
         - name: share-volume
